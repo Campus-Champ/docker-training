@@ -3,43 +3,55 @@
 Docker CLI commands:
 
 * docker ps
+
 Lists all running Docker containers. 
-If you want to see all containers (not just running), use `docker ps -a`
+	If you want to see all containers (not just running), use `docker ps -a`
 
 * docker pull [image name]:[tag]
+
 Downloads a Docker image from Docker Hub
 
 * docker images
+
 Lists all Docker images that you have locally
 
 * docker run [image name]:[tag]
+
 run a Docker container from a Docker image. 
 You can specify the image either by its name or ID.
 ** DETACH
+
 docker run -d [image name]:[tag]
 runs in detached mode, eg, doesn't hijack your terminal
 run will pull the image from docker hub if it isn't found locally
 ** PORT BINDING
+
 docker run -d -p [local port]:[container port] [image name]:[tag]
 ** NAME THE CONTAINER
+
 docker run --name [given name] -d -p [local port]:[container port] [image name]:[tag]
 
 * docker logs [container name | container id]
+
 Fetches the logs of a container. 
 You can specify the container either by its name or ID.
 
 * docker stop [container name | container id]
+
 Stops a running Docker container. 
 You can specify the container either by its name or ID.
 
 * docker start [container name | container id]
+
 starts an existing container
 
 * docker rm [container name | container id]
+
 Deletes a Docker container. 
 You can specify the container either by its name or ID.
 
 * docker rmi [container name | container id]
+
 Removes a Docker image. 
 You can specify the image either by its name or ID.
 
